@@ -1,2 +1,5 @@
 misc
+*.pyc
+*.swp
+.pytest_cache
 
