@@ -1,0 +1,10 @@
+class cryptogram solution
+
+Contains a representation of a solution to the cryptogram.
+
+Requirements:
+
+1. cryptogram_solution needs to take a ciphertext and convert it into its
+  guess at cleartext.
+2. cryptogram_solution needs to generate a random initial solution.
+3. cryptogram_solution can be mutated by swapping two letters randomly.
