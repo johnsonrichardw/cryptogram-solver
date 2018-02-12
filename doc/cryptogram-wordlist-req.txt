@@ -1,0 +1,3 @@
+class cryptogram wordlist
+
+Contains a word list of acceptable deciphered words
