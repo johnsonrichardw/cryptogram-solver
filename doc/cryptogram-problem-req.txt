@@ -1,0 +1,12 @@
+class cryptogram problem
+
+Contains a representation of a cryptogram problem.
+
+Requirements:
+
+1. cryptogram_problem can take a possible solution and run the problem's
+  ciphertext through the soltuion's decipher to produce a proposed cleartext.
+2. cryptogram_problem can take the proposed cleartext and score the solution,
+  determining how good of a translation the proposed cleartext is.
+3. cryptogram_problem can take a word list object to help scoring a
+  cleartext by determining how many real words are in the cleartext.
