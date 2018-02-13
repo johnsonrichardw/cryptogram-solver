@@ -1,6 +1,7 @@
 import pytest
 from cryptogram_problem import cryptogram_problem as cp
 from cryptogram_solution import cryptogram_solution as cs
+from cryptogram_wordlist import cryptogram_wordlist as wl
 
 def test_init_class():
     assert cp() != None
@@ -26,6 +27,9 @@ def test_solution_score():
     prob.set_ciphertext('EVPUNEQ AND EVPUNEQ')
     cleartext = prob.apply_solution(solution)
     assert cleartext == 'RICHARD NAQ RICHARD'
-    assert prob.score_solution(cleartext,['JOLLIES','SPEED','RICHARD','NAME']) == 14
-    assert prob.score_solution(cleartext,['RIC','HARD','A','TRUNKES']) == 0
+    wordlist = wl()
+    wordlist.load_list('test-list.txt')
+    assert prob.score_solution(cleartext,wordlist) == 14
+    wordlist.words = {}
+    assert prob.score_solution(cleartext,wordlist) == 0
 

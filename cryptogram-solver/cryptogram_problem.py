@@ -11,6 +11,6 @@ class cryptogram_problem():
         score = 0
         clear_list = cleartext.split()
         for word in clear_list:
-            if word in wordlist:
+            if wordlist.is_word(word):
                 score += len(word)
         return score

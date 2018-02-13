@@ -1,3 +1,12 @@
 class cryptogram wordlist
 
 Contains a word list of acceptable deciphered words
+
+Requirements:
+
+1. wordlist needs to take a text file and load the file into a list.
+2. wordlist needs to ensure that looking up a word in the list fast, maybe
+  by a binary search or a hash lookup.
+3. wordlist needs to make sure the words it holds are upper case.
+4. wordlist needs to have an interface to determine if a given word is in the
+  list.
