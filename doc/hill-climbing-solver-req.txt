@@ -1,0 +1,13 @@
+class hill climbing solver
+
+Implements a hill climbimg algorithm to solve a given cryptogram problem
+
+Requirements:
+
+1. The hill climber takes a cryptogram problem and gets an initial solution
+  from it.
+2. The hill climber will enter a loop where it will copy the current solution
+  and creates a bunch of other solutions that are mutated. Then the best
+  solution that is better or equal to the current solution now becomes the
+  new current solution and loop continues to the next iteration.
+3. If 
