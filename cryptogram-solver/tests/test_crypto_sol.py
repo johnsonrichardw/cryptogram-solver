@@ -82,3 +82,18 @@ def test_case():
         cs.set_deciphered_value(expected_vals[i],rot13[i])
     assert cs.decipher('evpuneq') == 'RICHARD'
 
+def test_copy():
+    cs_a = cryptogram_solution()
+    cs_b = cs_a.copy()
+    for c in string.ascii_uppercase:
+        assert cs_a.get_deciphered_value(c) == cs_b.get_deciphered_value(c)
+
+def test_deep_copy():
+    cs_a = cryptogram_solution()
+    cs_b = cs_a.copy()
+    cs_b.mutate()
+    different = 0
+    for c in string.ascii_uppercase:
+        if cs_a.get_deciphered_value(c) != cs_b.get_deciphered_value(c):
+            different += 1
+    assert different == 2

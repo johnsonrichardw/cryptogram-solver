@@ -1,5 +1,6 @@
 import string
 import random
+import copy
 
 class cryptogram_solution():
     def __init__(self):
@@ -45,3 +46,8 @@ class cryptogram_solution():
         for i in range(len(ciphertext)):
             cleartext += self.get_deciphered_value(ciphertext[i])
         return cleartext
+
+    def copy(self):
+        c = cryptogram_solution()
+        c.solution = copy.deepcopy(self.solution)
+        return c
