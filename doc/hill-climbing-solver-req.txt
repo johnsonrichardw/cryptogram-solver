@@ -10,4 +10,11 @@ Requirements:
   and creates a bunch of other solutions that are mutated. Then the best
   solution that is better or equal to the current solution now becomes the
   new current solution and loop continues to the next iteration.
-3. If 
+3. If the algorithm finds a perfect solution, ie. the reported score equals
+  the maximum possible end the loop and report the solution.
+3. If the algorithm hasn't increased the solution's score after N iterations or
+  we've hit4 a maximum iteration limit M, end the loop and the current solution
+  becomes the reported solution.
+4. Alternatively, if we end without finding a perfect solution rerun the loop
+  with a new initial solution X times, and report the best solution out of all
+  solutions reported by the individual loops.
