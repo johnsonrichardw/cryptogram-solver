@@ -14,3 +14,10 @@ class cryptogram_problem():
             if wordlist.is_word(word):
                 score += len(word)
         return score
+
+    def max_score(self):
+        score = 0
+        split_prob = self.problem.split()
+        for word in split_prob:
+            score += len(word)
+        return score

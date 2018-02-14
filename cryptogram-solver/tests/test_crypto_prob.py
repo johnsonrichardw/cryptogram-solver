@@ -33,3 +33,10 @@ def test_solution_score():
     wordlist.words = {}
     assert prob.score_solution(cleartext,wordlist) == 0
 
+def test_max_score():
+    prob = cp()
+    prob.set_ciphertext('ASDF TRE P OF')
+    assert prob.max_score() == 10
+    prob = cp()
+    prob.set_ciphertext("AS'D TOY.")
+    assert prob.max_score() == 8
